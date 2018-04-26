@@ -1,0 +1,16 @@
+name: sk
+version: 0.0.1
+build-type: Simple
+cabal-version: >= 1.10
+
+library
+  exposed-modules: SK, Lexer, Parser
+  build-depends: base, array
+  default-language: Haskell2010
+  hs-source-dirs: src
+
+executable sk
+  main-is: Main.hs
+  build-depends: base, array, sk
+  default-language: Haskell2010
+  build-tools: alex, happy
